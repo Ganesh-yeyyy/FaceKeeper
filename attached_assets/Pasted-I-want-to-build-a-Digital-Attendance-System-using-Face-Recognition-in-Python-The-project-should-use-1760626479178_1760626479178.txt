@@ -1,0 +1,44 @@
+I want to build a Digital Attendance System using Face Recognition in Python.
+The project should use the face_recognition, cv2 (OpenCV), and numpy libraries for detecting and matching faces, and sqlite3 for storing attendance data.
+
+Project Description:
+The system should recognize faces from the webcam feed and automatically mark attendance for known people. Each recognized face should be recorded in an attendance database (or CSV file) with their name, date, and time. If a face is unrecognized, it should skip or show “Unknown.”
+
+Features to include:
+
+Face Registration System – Allow adding new users by capturing and saving their face images and names.
+
+Face Recognition for Attendance – Continuously read from webcam and mark attendance when a face matches a registered user.
+
+Database Integration (SQLite) – Store user info (ID, Name, Roll Number) and attendance logs (Date, Time, Status).
+
+Avoid Duplicate Entries – Ensure one attendance record per person per day.
+
+Export Reports – Generate a CSV or Excel report of attendance for any date.
+
+Simple CLI or GUI – Either a terminal-based menu or a Tkinter GUI to choose between “Register Face” and “Start Attendance.”
+
+Bonus (optional) features:
+
+Add voice feedback using pyttsx3 that says “Attendance marked for <name>”.
+
+Add an option to view attendance statistics (like total days present).
+
+Use a threshold (e.g., 0.6) for face recognition accuracy.
+
+Tech stack:
+Python 3, OpenCV (cv2), face_recognition, numpy, sqlite3, pandas (for exporting CSV).
+
+Project Structure:
+
+/main.py                -> main entry point  
+/face_register.py       -> capture and save faces for registration  
+/attendance.py          -> recognize faces and mark attendance  
+/database.py            -> handle SQLite database  
+/utils/                 -> helper functions (e.g., timestamp, report generator)  
+/known_faces/           -> store registered face images  
+/attendance_reports/    -> save CSV/Excel attendance reports  
+
+
+Please generate the full project with clean, modular Python code, comments explaining each step, and example database creation.
+The system should be runnable in Replit (use cv2.VideoCapture(0) for webcam input).
